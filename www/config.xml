@@ -16,5 +16,20 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         SEC'16
     </author>
-
+    
+    
+    <preference name="fullscreen" value="true" />
+    
+    <gap:plugin name="org.apache.cordova.vibration" />
+    
+    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    
+    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    
+    <access origin="*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
 </widget>

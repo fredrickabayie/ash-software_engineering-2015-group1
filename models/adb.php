@@ -6,17 +6,17 @@
  * description: A root class for all manage classes. This class communicates with DB
  */
 
-define("DB_HOST", 'localhost');
-define("DB_NAME", 'system');
-define("DB_PORT", 3306);
-define("DB_USER","admin");
-define("DB_PWORD","Ashesi@2016?");
-
 //define("DB_HOST", 'localhost');
-//define("DB_NAME", 'csashesi_fredrick-abayie');
+//define("DB_NAME", 'system');
 //define("DB_PORT", 3306);
-//define("DB_USER","csashesi_fa16");
-//define("DB_PWORD","db!hEi2As");
+//define("DB_USER","admin");
+//define("DB_PWORD","Ashesi@2016?");
+
+define("DB_HOST", 'localhost');
+define("DB_NAME", 'csashesi_fredrick-abayie');
+define("DB_PORT", 3306);
+define("DB_USER","csashesi_fa16");
+define("DB_PWORD","db!hEi2As");
 
 define("LOG_LEVEL_SEC",0);
 define("LOG_LEVEL_DB_FAIL",0);

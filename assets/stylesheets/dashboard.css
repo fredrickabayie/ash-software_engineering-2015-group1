@@ -1,0 +1,1302 @@
+
+/* 
+    Created on : Mar 31, 2015, 1:19:09 AM
+    Author     : fredrick.abayie
+*/
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+/*    display: block;
+    position: absolute;*/
+    background-color: #fff;
+    position: absolute!important;
+    scrollbar-base-color: #fff;
+    scrollbar-face-color: #c8c8c8;
+    scrollbar-shadow-color: #fff;
+    scrollbar-highlight-color: #fff;
+    scrollbar-3dlight-color: #fff;
+    scrollbar-darkshadow-color: #fff;
+    scrollbar-track-color: #fff;
+    scrollbar-arrow-color: #fff;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+.maincontainer{
+    /*background-color: lightyellow;*/
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    display: block;
+    position: absolute;
+}
+
+.innercontainer{
+    width: 100%;
+    height: 100%;
+    /*background-color: yellow;*/
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    display: block;
+    position: absolute;
+}
+
+.header{
+    background-color: darkgreen;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div{
+    display: block;
+}
+
+.inner2container{
+    /*background-color: lightcyan;*/
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+}
+
+.leftnavmenu{
+    /*background-color: lightyellow;*/
+    position: absolute;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: 256px;
+    /*width: 300px*/
+}
+
+.leftnavmenuinner{
+    /*background-color: thistle;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.leftnavmenuinnertop{
+    /*background-color: violet;*/
+    position: absolute;
+    top: 0;
+    height: 100px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.leftnavmenuinnerdown{
+    /*background-color: springgreen;*/
+    position: absolute;
+    top: 107px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.leftnavmenuinnerdownnav{
+    /*background-color: plum;*/
+    clear: both;
+    display: block;
+    top: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.leftnavmenuinnernotification{
+    /*background-color: springgreen;*/
+    position: absolute;
+    top: 307px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.leftnavmenuinnernotificationinner{
+    /*background-color: plum;*/
+    clear: both;
+    display: block;
+    top: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seperator{
+    position: absolute;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 256px;
+    height: auto;
+    width: 4px;
+    cursor: col-resize!important;
+    z-index: 1000;
+}
+
+.showcontent{
+    /*background-color: lightslategrey;*/
+    position: absolute;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 250px;
+    height: auto;
+    width: 574px;  
+    border-left: 1px solid #e5e3e3;
+    -webkit-box-shadow: -2px 2px 4px RGBA(150,152,154,.2);
+    box-shadow: -2px 2px 4px RGBA(150,152,154,.2);
+    z-index: 3;
+}
+
+.showcontenttop{
+    /*background-color: lightsalmon;*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 7px;
+    width: auto;
+}
+
+.showcontenttoplabel{
+    /*background-color: lightgoldenrodyellow;*/
+    margin-left: 0;
+    padding-top: 7px;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 33px;
+    width: auto;
+}
+
+.showcontenttopsearch{
+    /*background-color: lightseagreen;*/
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 37px;
+    width: auto;
+}
+
+.showcontenttopsearchfield{
+    padding-left: 5px;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 470px;
+    height: 30px;
+    position: absolute;
+    display: none;
+}
+
+.showcontentdetails{
+    /*background-color: lightskyblue;*/
+    position: absolute;
+    top: 77px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+}
+
+.showcontentdetailsinner{
+    /*background-color: chocolate;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.showcontentdetailsinner::-webkit-scrollbar{
+    height: 18px;
+    width: 18px;
+}
+
+.showcontentdetailsinner::-webkit-scrollbar-thumb{
+    border-radius: 9px;
+border: solid 6px #fff;
+background-color: #c8c8c8;
+}
+
+.showcontentdetailsinner::-webkit-scrollbar-button{
+    background-color: #fff;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+.showcontentdetailsinner::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+.showcontentdetailsinner::-webkit-scrollbar-corner{
+    background-color: #fff;
+}
+
+.showcontentdetailsinnertile{
+    /*background-color: olive;*/
+    width: 556px;
+    height: 66px;
+    position: relative;
+    cursor: default;
+    outline: none;
+}
+
+/*:hover{
+    
+}*/
+
+.showcontentdetailsinnertile:hover .showcontentdetailsinnertilecheckbox{
+    background-color: red;
+    opacity: 1;
+    filter: alpha ( opacity = 1);
+    border: 0px;
+}
+
+.showcontentdetailsinnertile:hover .showcontentdetailsinnertiledelete{
+     opacity: 1;
+    filter: alpha ( opacity = 1);
+/*        width: 20px;
+    height: 20px;*/
+}
+
+.showcontentdetailsinnertile2:hover{
+    background-color: lightgray
+}
+
+.showcontentdetailsinnertilecheckbox{
+    position: absolute;
+    outline: 0;
+    z-index: 2;
+    top: 5px;
+    left: 6px;
+    cursor: pointer;
+    border-width: 0;
+    padding: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.showcontentdetailsinnertilename{
+    /*background-color: seashell;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 5px 0 0 40px;
+    height: 23px;
+    color: #333;
+    font-family: "wf_segoe-ui_semilight", "Segoe UI Semilight", "Segoe WP Semilight", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.showcontentdetailsinnertiledelete{
+    /*background-color: blue;*/
+/*    width: 20px;
+    height: 20px;*/
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha ( opacity=0);
+}
+
+.showcontentdetailsinnertiledelete:hover{
+    /*background-color: violet*/
+}
+
+.showcontentdetailsinnertiletitle{
+    /*background-color: silver;*/
+    padding-left: 40px;
+    position: relative;
+    left: 0;
+    /*padding: 0;*/
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin: -1px 0 0 0;
+    height: 17px;
+    color: #333;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.showcontentdetailsinnertiledescription{
+    /*background-color: rosybrown;*/
+    margin: -2px 45px 0 23px;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    left: 0;
+    height: 23px;
+    padding-left: 17px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    /*padding: 0;*/
+    line-height: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    color: #333;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/*Mytask css*/
+.showcontenttopmy{
+    /*background-color: lightsalmon;*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 7px;
+    width: auto;
+}
+
+.showcontenttoplabelmy{
+    /*background-color: lightgoldenrodyellow;*/
+    margin-left: 0;
+    padding-top: 7px;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 33px;
+    width: auto;
+}
+
+.showcontenttopsearchmy{
+    /*background-color: lightseagreen;*/
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: auto;
+    left: 0px;
+    height: 37px;
+    width: auto;
+}
+
+.showcontenttopsearchfieldmy{
+    padding-left: 5px;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 470px;
+    height: 30px;
+    position: absolute;
+    display: none;
+}
+
+.showcontentdetailsmy{
+    /*background-color: lightskyblue;*/
+    position: absolute;
+    top: 77px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+}
+
+.showcontentdetailsinnermy{
+    /*background-color: chocolate;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.showcontentdetailsinnermy::-webkit-scrollbar{
+    height: 18px;
+    width: 18px;
+}
+
+.showcontentdetailsinnermy::-webkit-scrollbar-thumb{
+    border-radius: 9px;
+border: solid 6px #fff;
+background-color: #c8c8c8;
+}
+
+.showcontentdetailsinnermy::-webkit-scrollbar-button{
+    background-color: #fff;
+background-repeat: no-repeat;
+cursor: pointer;
+}
+
+.showcontentdetailsinnermy::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+.showcontentdetailsinnermy::-webkit-scrollbar-corner{
+    background-color: #fff;
+}
+
+.showcontentdetailsinnertilemy{
+    /*background-color: olive;*/
+    width: 556px;
+    height: 66px;
+    position: relative;
+    cursor: default;
+    outline: none;
+}
+
+/*:hover{
+    
+}*/
+
+.showcontentdetailsinnertilemy:hover .showcontentdetailsinnertilecheckboxmy{
+    background-color: red;
+    opacity: 1;
+    filter: alpha ( opacity = 1);
+    border: 0px;
+}
+
+.showcontentdetailsinnertilemy:hover .showcontentdetailsinnertiledeletemy{
+     opacity: 1;
+    filter: alpha ( opacity = 1);
+/*        width: 20px;
+    height: 20px;*/
+}
+
+.showcontentdetailsinnertile2my:hover{
+    background-color: lightgray
+}
+
+.showcontentdetailsinnertilecheckboxmy{
+    position: absolute;
+    outline: 0;
+    z-index: 2;
+    top: 5px;
+    left: 6px;
+    cursor: pointer;
+    border-width: 0;
+    padding: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.showcontentdetailsinnertilenamemy{
+    /*background-color: seashell;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 5px 0 0 40px;
+    height: 23px;
+    color: #333;
+    font-family: "wf_segoe-ui_semilight", "Segoe UI Semilight", "Segoe WP Semilight", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.showcontentdetailsinnertiledeletemy{
+    /*background-color: blue;*/
+/*    width: 20px;
+    height: 20px;*/
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha ( opacity=0);
+}
+
+.showcontentdetailsinnertiledeletemy:hover{
+    /*background-color: violet*/
+}
+
+.showcontentdetailsinnertiletitlemy{
+    /*background-color: silver;*/
+    padding-left: 40px;
+    position: relative;
+    left: 0;
+    /*padding: 0;*/
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin: -1px 0 0 0;
+    height: 17px;
+    color: #333;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.showcontentdetailsinnertiledescriptionmy{
+    /*background-color: rosybrown;*/
+    margin: -2px 45px 0 23px;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    left: 0;
+    height: 23px;
+    padding-left: 17px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    /*padding: 0;*/
+    line-height: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    color: #333;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/*End of mytask css*/
+
+.seperator2{
+    position: absolute;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 826px;
+    height: auto;
+    width: 4px;
+    cursor: col-resize!important;
+    border-left: 1px solid #e5e3e3;
+    -webkit-box-shadow: -2px 2px 4px RGBA(150,152,154,.2);
+    box-shadow: -2px 2px 4px RGBA(150,152,154,.2);
+    z-index: 3;
+}
+
+.showpreview{
+    /*background-color: khaki;*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 820px;
+    height: auto;
+    width: auto;
+}
+
+.showpreview2{
+    /*background-color: darkorange;*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+/*    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+    overflow: auto;*/
+    display: block;
+/*    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 32px;
+    padding: 18px 20px 0 0;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: auto;*/
+}
+
+.showpreviewinner{
+    /*background-color: saddlebrown;*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 32px;
+    padding: 18px 20px 0 0;
+    -webkit-user-select: text;
+    cursor: auto;
+}
+
+.showpreviewinner2{
+    display: block;
+}
+
+.showpreviewinner2upper{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 30px 9px 0;
+    word-wrap: break-word;
+}
+
+
+
+.showpreviewinnerbuttons{
+    position: relative;
+    /*background-color: yellowgreen;*/
+}
+
+/*.newtaskbutton{
+    border: 0px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: beige;
+    cursor: pointer;
+}*/
+
+/*.newtaskbutton:hover{
+    background-color: yellow;
+}*/
+
+/*.deletetaskbutton{
+    border: 0px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: beige;
+    cursor: pointer;
+}
+
+.deletetaskbutton:hover{
+    background-color: yellow;
+}*/
+
+.showpreviewinnercontent{
+    /*background-color: purple;*/
+    min-height: 70px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 30px;
+    position: relative;
+    border-color: #eaeaea;
+    min-width: 350px;
+    clear: both;
+    display: block;
+}
+
+.showpreviewinnercontentheader{
+    /*background-color: magenta;*/
+    min-height: 70px;
+    min-width: 200px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.showpreviewinnercontentheaderinner{
+    /*background-color: tan;*/
+    padding-top: 32px;
+    outline: none;
+}
+
+.showpreviewinnercontentheaderinnerbuttons{
+    /*background-color: orangered;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.addtaskbutton{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: blue;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer!important;
+    display: none;
+}
+
+.newtaskbutton{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: blue;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer!important;
+}
+
+.newtaskbutton:hover{
+    /*background-color: lightcyan;*/
+}
+
+.newtaskbutton>span>i{
+    color: blue;
+}
+
+.deletetaskbutton{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: blue;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer!important;
+    
+/*    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer!important;*/
+}
+
+.updatetaskbutton{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: blue;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer!important;
+
+/*    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer!important;*/
+}
+
+.edittaskbutton{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    z-index: 2;
+    margin: 0 0 0 20px;
+    padding: 1px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: blue;
+    border: 2px solid blue;
+    background-color: transparent;
+    cursor: pointer!important;
+    display: none;
+}
+
+.previewcontentheaderbody{
+    /*background-color: yellowgreen;*/
+    display: block;
+    margin-top: 20px;
+}
+
+.previewcontentheaderbodybutton{
+    float: right;
+    margin-left: 10px;
+    margin-top: 4px;
+    background: transparent;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer!important;
+    font-size: 14px;
+}
+
+.showpreviewinnercontentheaderimage{
+    float: left;
+    max-width: 171px;
+    margin: 4px 10px 0 0;
+    background-color: peru;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin: 0;
+    overflow: hidden;
+    vertical-align: top;
+    position: relative;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    display: table-cell;
+    width: 164px;
+    height: 164px;
+    
+}
+
+.showpreviewinnercontentheaderimage img{
+    max-width: 164px;
+    max-height: 164px;
+    min-height: 164px;
+    min-width: 164px;
+}
+
+.previewcontentheaderbodynamecontainer{
+    /*background-color: goldenrod;*/
+    padding: 5px 0 0 0;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.previewcontentheaderbodyname{
+    white-space: nowrap;
+    display: inline-block;
+    padding-bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    color: #333;
+}
+
+.previewcontentheaderbodydate{
+    /*background-color: dimgrey;*/
+    /*margin-top: -2px;*/
+    color: #333;
+    font-family: "wf_segoe-ui_normal", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    /*margin-top: 5px;*/
+    
+}
+
+.previewcontentheaderbodycollaborator{
+    
+}
+
+.previewcontentheaderbodytitle{
+    /*background-color: wheat;*/
+    margin-top: 55px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+.previewcontentheaderbodydescription{
+    /*background-color: lime;*/
+    margin-top: 25px;
+    float: left;
+    height: 200px;
+    width: 100%;
+    /*white-space: nowrap;*/
+    /*display: block;*/
+}
+
+.buttonsbuttons{
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 17px;
+}
+
+.buttonsbuttons:hover{
+    /*background-color: sandybrown;*/
+    border-right: 10px solid black;
+}
+
+.buttonsbuttons:visited .buttonsbuttons:active{
+    /*background-color: sandybrown;*/
+    border-right: 10px solid red;
+}
+
+.username{
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;;
+    font-size: 15px;
+    border: 1px solid black;
+    width: 380px;
+    height: 35px;
+    padding-left: 10px;
+    margin-left: 50px;
+    border-radius: 3px;
+}
+
+.password{
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;;
+    font-size: 15px;
+    border: 1px solid black;
+    width: 380px;
+    height: 35px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+
+.footer{
+    background-color: darkgreen;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+/*    top: 0;
+    */left: 0;
+    /*clear: both;*/
+    bottom: 0px;
+    /*vertical-align: bottom;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#innerheader{
+    width: 100%;
+    height: 50px;
+}
+
+#innerheaderleft{
+    background-color: blue;
+    width: 273px;
+    height: 50px;
+    border: 0px;
+}
+
+#innerheaderleftlogo{
+    background-color: purple;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+}
+
+#innerheaderright{
+    /*text-align: right;*/
+    background-color: yellow;
+    width: 273px;
+    height: 50px;
+    display: block;
+    border: 0px;
+}
+
+#innerheaderrightprofilepicture{
+    background-color: indigo;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+}
+
+#contentwrapper{
+    /*position: static;*/
+    /*top: 50px;*/
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: auto;
+    background-color: yellow;
+    /*height: auto;*/
+}
+
+#leftnavigationmenu{
+    background-color: blue;
+    right: auto;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 240px;
+    display: block;
+}
+
+.nav{
+    list-style:none;
+    margin:0px;
+    padding: 0px;
+    /*text-align:center;*/
+}
+
+.nav li{
+    display: block;
+    /*padding-left: 10px*/
+}
+
+.nav a{
+    /*border:1px solid #ccc;*/
+    /*border-width:1px 0;*/
+    display:inline-block;
+    display: block;
+    padding:10px;
+    padding-left: 30px;
+    /*font-size: px;*/
+    color: white;
+}
+
+.nav a:hover{
+    background-color: purple;
+}
+
+.nav:active .nav:visited{
+    
+}
+
+#displaycontainer{
+    background-color: brown;
+    /*right: auto;*/
+    /*left: auto;*/
+    bottom: 0px;
+    left: 242px;
+    top: 0px;
+    height: 100%;
+    width: 620px;
+    position: absolute;
+    /*display: block;*/
+    max-height: 100%; 
+    /*display: inline-table;*/
+}
+
+#searchbar{
+    background-color: indigo;
+    text-align: center;
+}
+
+#searchfield{
+    width: 400px;
+    height: 15%;
+}
+
+#displaycontent{
+    /*position: relative;*/
+    background-color: goldenrod;
+    height: 97.8%;
+    width: 620px;
+}
+
+#previewcontent{
+       background-color: black;
+    right: auto;
+    /*bottom: 0px;*/
+/*    left: 0px;
+    top: 0px;*/
+    height: 100%;
+    width: 240px;
+    display: block;
+    left: 900px;
+    margin-left: 200px;
+    
+    /*position: relative;*/
+/*    background-color: black;
+    height: 97.8%;
+    width: 620px;*/
+}
+
+#contenttable{
+    margin-left: 20px;
+    margin-right: 5px;
+    border: 1px solid black;
+    width: 570px
+}
+
+#forminput
+{
+margin: 0px;
+border: 1px solid #B8B8B8;
+z-index: 3;
+background: transparent;
+color: #000000;
+    
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;;
+    font-size: 15px;
+    width: 370px;
+    /*margin: 10px;*/
+    /*margin-top: 30px;*/
+    margin-left: 55px;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 3px;
+    
+    font-size: 0.9em;
+font-family: 'Segoe UI' , 'Segoe' , 'SegoeUI-Regular-final', Tahoma, Helvetica, Arial, sans-serif;
+
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 2px inset;
+/*border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;*/
+cursor: auto;
+    
+}
+
+#loginbutton
+{
+    font-size: 17px;
+    box-shadow: none;
+    border-style: none;
+    width: 370px;
+    height: 40px;
+    display: inline-block;
+    /*background-color: #6496c8;*/
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#loginbutton:hover
+{
+    cursor: pointer;
+   background-color: lightgreen;
+}
+
+#image{
+    width: 1520px;
+    height: 1156px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    position: absolute;
+    visibility: visible;
+    display: block;
+    background-color: rgb(235, 60, 0);
+     background: url("../..//assets/img/nurselogin.jpg") no-repeat fixed;
+    /*background: #ffffff url(../assets/img/illustration.jpg) ;*/
+}
+
+#background{
+    position: fixed;
+left: 0px;
+top: 0;
+overflow: hidden;
+z-index: 0;
+opacity: 1;
+width: 100%;
+height: 100%;
+transition: opacity 1s;
+-moz-transition: opacity 1s;
+-webkit-transition: opacity 1s;
+-o-transition: opacity 1s;
+-ms-transition: opacity 1s;
+transition-property: opacity;
+transition-duration: 1s;
+background: rgb(235, 60, 0);
+}
+
+div{
+    display: block;
+}
+
+#loginpanel{
+    background: #FFFFFF;
+    position: fixed;
+    right: 0px;
+    float: right;
+    height: 100%;
+    width: 500px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -21,7 +21,7 @@ if ( isset ( $_REQUEST [ 'cmd' ] ) )
 
 function getTasksforNurse(){
     $nurseid = $_REQUEST['nurseid'];
-    require_once("task.php");
+    require_once("../models/task.php");
     $obj = new task();
     if($obj->getTaskforNurse($nurseid)){
         $row=$obj->fetch();

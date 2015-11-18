@@ -7,7 +7,7 @@ if ( isset ( $_REQUEST [ 'cmd' ] ) )
     switch ( $cmd )
     {
         case 1:
-            getTasksforNurse();
+            getTasksForNurse();
             break;        
         case 2:
             previewTask();
@@ -23,7 +23,7 @@ function getTasksforNurse(){
     $nurseid = $_REQUEST['nurseid'];
     require_once("../models/task.php");
     $obj = new task();
-    if($obj->getTaskforNurse($nurseid)){
+    if($obj->getTasksForNurse($nurseid)){
         $row=$obj->fetch();
         echo '{"result":1 ,"tasks":[';
         while($row){
@@ -37,6 +37,7 @@ function getTasksforNurse(){
     
     }
     else{
+        echo '{"result":0,"message:"error getting products"}';
         
     }
 }

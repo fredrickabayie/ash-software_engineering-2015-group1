@@ -9,91 +9,70 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"> </script>-->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!--
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    
+-->
+         <!--  Scripts-->
+  <script src="js/jquery-2.1.3.js"></script>
+  <script src="js/materialize.min.js"></script>
+    <script src="js/javascr.js"></script>
+    
     <script>
-        <script>
-         function sendRequest(u){
-        // Send request to server
-        //u a url as a string
-        //async is type of request
-        // alert(u);
-        var obj=$.ajax({url:u,async:false});
-
-        // alert(obj);
-        //Convert the JSON string to object
-        var result=$.parseJSON(obj.responseText);
-        // alert(result);
-        return result;  //return object
-        
-     }
-         function savetostock(){
-       var productid=$("#task_id").val();
-       var productname=$("#task_title").val();
-       var productquant=$("#textarea1").val();
-       var productprice=$("#").val();
-       var save="hello.php?cmd=1&task_id="+Task_id+"&productname="+productname+"&productquant="
-       +productquant+"&productprice="+productprice;
-       //prompt("url",save);
-       var request = sendRequest(save);
-       if(request.result==1){
-        document.getElementById("res1").innerHTML=request.message;
-        return;
-       }
-       else{
-        alert(request.message);
-       }
-    }
+       
 
     </script>
 <style>
+   
     
     </style>
     </head>
     <body>
-        <div class="row">
-    <form class="col s12">
+        <div class="row #b9f6ca green accent-1">
+    
+    <form class="col s12 " id= "addTask">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s10 ">
+            
           <input placeholder="Placeholder" id="task_id" type="text" class="validate">
-          <label for="first_name">Task ID:</label>
+            
+          <label for="first_name ">Task ID:     </label>
         </div>
-        </div>
-        <div class="input-field col s6">
-          <input id="task_tile" type="text" class="validate">
+        
+        <div class="input-field col s6  ">
+          <input id="task_title" type="text" class="validate">
           <label for="last_name">Task Title:</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <textarea id="textarea1" class="materialize-textarea "></textarea>
           <label for="textarea1">Task Description</label>
           </div>
       </div>
       <div class="row">
-        <div class="input-field col s10">
-           <input type="date"      class="datepicker">
+        <div class="input-field col s10 ">
+           <input type="date" id="startdate" class="datepicker">
           <label for="password">start Date</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-           <input type="date" class="datepicker">
+        <div class="input-field col s12 ">
+           <input type="date" id="enddate" class="datepicker">
           <label for="email">End Date</label>
             
         </div>
       </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Add Task
+        <button class="btn waves-effect waves-light #000000 black" id="hid">add Task
         
-    <i class="material-icons right">send</i>
+    <i class="material-icons right ">send</i>
   </button>
-    </form>
+        </div>
+ </form>
   </div>
         
-         <!--  Scripts-->
-  <script src="js/jquery-2.1.3.js"></script>
-  <script src="js/materialize.min.js"></script>
-    <script src="js/javascr.js"></script>
+    
        
     </body>
 </html>

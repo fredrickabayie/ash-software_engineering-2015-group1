@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>pos</title>
+    <title>Nurse Management Task</title>
   
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"> </script>-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="font/css/font-awesome.min.css">
@@ -15,37 +15,7 @@
     
       
     <script>
-         function sendRequest(u){
-        // Send request to server
-        //u a url as a string
-        //async is type of request
-        // alert(u);
-        var obj=$.ajax({url:u,async:false});
-
-        // alert(obj);
-        //Convert the JSON string to object
-        var result=$.parseJSON(obj.responseText);
-        // alert(result);
-        return result;  //return object
         
-     }
-         function savetostock(){
-       var productid=$("#productid").val();
-       var productname=$("#productname").val();
-       var productquant=$("#productquant").val();
-       var productprice=$("#productprice").val();
-       var save="hello.php?cmd=2&productid="+productid+"&productname="+productname+"&productquant="
-       +productquant+"&productprice="+productprice;
-       //prompt("url",save);
-       var request = sendRequest(save);
-       if(request.result==1){
-        document.getElementById("res1").innerHTML=request.message;
-        return;
-       }
-       else{
-        alert(request.message);
-       }
-    }
 
         
 
@@ -63,71 +33,27 @@
       
 <nav>
     
-     <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"><img class="responsive-img" src="images/sample-1.JPEG"></a>
-    <ul class="right hide-on-med-and-down">
+     <div class="nav-wrapper #009688 teal">
+    <a href="#!" class="brand-logo"> Logo</a>
+    <ul class="right hide-on-med-and-down #009688 teal">
       <li><a href="addTask.html">Add Task </a></li>
-      <li><a href="badges.html">Assign Task</a></li>
+      <li><a href="assignedtask.html">Assign Task</a></li>
       <!-- Dropdown Trigger -->
       
   </div>
 </nav>
-    
-    <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="task_id" type="text" class="validate">
-          <label for="first_name">Task ID:</label>
-        </div>
-        </div>
-        <div class="input-field col s6">
-          <input id="task_tile" type="text" class="validate">
-          <label for="last_name">Task Title:</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Task Description</label>
-          </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s10">
-           <input type="date"      class="datepicker">
-          <label for="password">start Date</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-           <input type="date" class="datepicker">
-          <label for="email">End Date</label>
-            
-        </div>
-      </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Assign Task
-        
-    <i class="material-icons right">send</i>
-  </button>
-        
-    </form>
-  </div>
-        
-    
-    
-    
-    
-    
-    
- 
-          <footer class="page-footer">
+    <div class="intro #eceff1 blue-grey #009688 teal">
+<h1 class="#009688 teal grey-text-darkent-1 center">Welcome </h1>
+        <h2 class ="#009688 teal grey-text-darkent-1 center">Nurse Task Management Application </h2><img class="responsive-img" width="100%" src="images/nurses.jpg">
+</div>
+      <footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s10">
                 <h4 class="white-text">Footer 
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2015  JULATEH 
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
@@ -138,6 +64,7 @@
   <script src="js/jquery-2.1.3.js"></script>
   <script src="js/materialize.min.js"></script>
  <script src="js/javascr.js"></script>
+                  
  
        
     </body>

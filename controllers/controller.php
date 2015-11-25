@@ -28,6 +28,7 @@ function searchTaskByName($taskName){
 	echo '{"result" : 1, "message" : [';
 	while ($row){
 		echo json_encode($row);
+		$row = $task->fetch();
 		if($row){
 			echo ",";
 		}

@@ -25,7 +25,7 @@ function searchTaskByName($taskName){
 		return;
 	}
 	$row = $task->fetch();
-	echo $row;
+	echo json_encode($row);
 	echo mysql_error();
 	// echo '{"result" : 1, "message" : [';
 	// while ($row){

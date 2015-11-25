@@ -1,11 +1,19 @@
 <?php
-//if(isset($_REQUEST['cmd'])){
-//    echo '{"result":0,message:"unknown command"}';
-//    exit();
-//    
-//}
+/* This  the controller class 
+*It contains all the major fucntions used in the 
+the implementation process.
+*
+*/
+/**
+@author Julateh Mulbah
+*This class also include the model.php class where the addtask function is located.
+*
+*/
 
 include_once("model.php");
+/**
+*This class extends the model class.
+*/
 class addingTask extends model{
     
 /**
@@ -24,7 +32,7 @@ function addTask(){
         $enddate=$_REQUEST['enddate'];
 		$result=$this->addtasks($taskid,$tasktitle,$taskdescp,$startdate,$enddate);
 		if(!$result){
-			echo "failed to add Task".mysql_error();
+			echo '{"result":0,"message":"failed to assign task"}';
 			return;
 		}else {
 			echo '{"result":1,"message":"sucessfully added Task"}';
@@ -34,21 +42,28 @@ function addTask(){
 }
     
 }
-    function assignTask(){
-    	if(isset($_REQUEST['taskid'])&&(isset($_REQUEST['nurseid'])))
-    	{
-    		$taskid=$_REQUEST['taskid'];
-    		$tasktitle=$_REQUEST['tasktitle'];
-    		$taskdescp=$_REQUEST['taskdescp'];
-    		$startdate=$_REQUEST['startdate'];
-    		$enddate=$_REQUEST['enddate'];
-    		$nurseid=$_REQUEST['nurseid'];
-
-
-    	}
-        
-    }
     
+    function assignedtask(){
+        if(isset($_REQUEST['tid']) && (isset($_REQUEST["ttitle"]))){
+            $tid=$_REQUEST['tid'];
+            $ttitle=$_REQUEST['ttitle'];
+            $tdescrip=$_REQUEST['tdescrip'];
+            $stdat=$_REQUEST['stdat'];
+            $endat=$_REQUEST['endat'];
+            $nuid=$_REQUEST['nuid'];
+            $result=$this->assigntask($tid,$ttitle,$tdescrip,$stdat,$endat,$nuid);
+            $result1=$this->assigntasktoNurse($tid,$nuid);
+           
+            if(!$result && !$result1){
+                echo '{"result":0,"message":"failed to assign task"}';
+                return;
+            }else{
+                echo
+                    '{"result":1,"message":" Task was sucessfully assigned "}';
+                return;
+            }
+        }
+    }
 }
 
 $mytask = new addingTask();
@@ -58,5 +73,6 @@ switch($cmd){
         $mytask->addTask();
         break;
     case 2:
-        $mytask->assignTask();
+        $mytask->assignedTask();
+        break;
 }

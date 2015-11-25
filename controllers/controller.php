@@ -4,6 +4,7 @@ if (!isset($_REQUEST['cmd'])){
 	echo '{"result" : 0, "message" : "Unset Comand"}';
 	exit();
 }
+$cmd = $_REQUEST['cmd'];
 switch ($cmd) {
 	case 1 : 
 		if (!isset($_REQUEST['tn'])){

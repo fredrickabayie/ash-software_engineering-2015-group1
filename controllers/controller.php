@@ -26,7 +26,7 @@ function searchTaskByName($taskName){
 	$row = $task->fetch();
 	echo '{"result" : 1, "message" : [';
 	while ($row){
-		echo json_decode($row)
+		echo json_decode($row);
 		if($row){
 			echo ",";
 		}

@@ -31,7 +31,7 @@ function searchTaskByName($taskName){
 			echo ",";
 		}
 	} 
-	echo ']}'
+	echo ']}';
 	return;
 }
 

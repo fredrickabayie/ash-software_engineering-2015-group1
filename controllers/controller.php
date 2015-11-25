@@ -25,16 +25,14 @@ function searchTaskByName($taskName){
 		return;
 	}
 	$row = $task->fetch();
-	echo json_encode($row);
-	echo mysql_error();
-	// echo '{"result" : 1, "message" : [';
-	// while ($row){
-	// 	echo json_decode($row);
-	// 	if($row){
-	// 		echo ",";
-	// 	}
-	// } 
-	// echo ']}';
+	echo '{"result" : 1, "message" : [';
+	while ($row){
+		echo json_encode($row);
+		if($row){
+			echo ",";
+		}
+	} 
+	echo ']}';
 	return;
 }
 

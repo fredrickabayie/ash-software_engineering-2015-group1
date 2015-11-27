@@ -11,6 +11,9 @@
   <!--css-->
   <link rel="stylesheet" href="../assets/stylesheets/dashboard.css" type="text/css">
 
+  <!-- materialize css -->
+  <link type="text/css" rel="stylesheet" href="../assets/materialize/css/materialize.min.css"  media="screen,projection"/>
+
   <!--font awesome-->
   <link rel="stylesheet" href="../assets/stylesheets/font-awesome.min.css" type="text/css">
   <!--<link rel="stylesheet" href="../assets/stylesheets/font-awesome.css" type="text/css">-->

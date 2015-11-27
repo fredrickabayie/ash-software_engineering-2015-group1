@@ -10,7 +10,7 @@ include_once ( 'adb.php' );
  */
 class Login extends adb
 {
-    
+
     /**
      * Constructor
      */
@@ -18,8 +18,8 @@ class Login extends adb
     {
         $this->establish_connection ( );
     }//end of constructor
-    
-    
+
+
     /**
      * Destructor
      */
@@ -27,8 +27,8 @@ class Login extends adb
     {
         $this->close_connection ( );
     }//end of destructor
-        
-    
+
+
     /**
      * Function to check nurse_id and nurse_password
      */
@@ -46,6 +46,6 @@ class Login extends adb
           return $this->fetch ( );
        }
     }//end of add_new_task
-    
-        
+
+
 }//end of class

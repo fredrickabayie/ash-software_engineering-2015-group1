@@ -41,7 +41,7 @@ if ( isset ( $_REQUEST [ 'cmd' ] ) )
          }
          else
          {
-             session_start ( );
+             session_start ( );  
              $user_type = $row['user_type'];
              if ( $user_type == 'admin' )
              {

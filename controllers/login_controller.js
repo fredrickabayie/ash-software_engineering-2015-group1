@@ -2,7 +2,7 @@
 
 function syncAjax ( u )
 {
-    var obj = $.ajax ({url: u, async: true});
+    var obj = $.ajax ({url: u, async: false});
     var result = $.parseJSON ( obj.responseText );
     return result;
 }//end of syncAjax

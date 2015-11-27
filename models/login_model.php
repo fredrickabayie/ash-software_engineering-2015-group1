@@ -32,7 +32,7 @@ class Login extends adb
     /**
      * Function to check nurse_id and nurse_password
      */
-    function user_login ( $username, $password )
+    function user_login_query ( $username, $password )
     {
        $login_query = "select system_login.user_id, system_login.user_type, system_login.username "
                . "from system_login"

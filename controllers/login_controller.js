@@ -15,12 +15,12 @@ $( function ( )
     {
         var username = $("#username").val();
         var password = $("#password").val();
-       var url = "../controllers/user_controller.php?cmd=7&username="+username+"&password="+password;
+        var url = "http://cs.ashesi.edu.gh/~csashesi/class2016/fredrick-abayie/softwareegineering/ash-software_engineering-2015-group1/php/login_controller.php?cmd=user_login&username="+username+"&password="+password;
        var obj = syncAjax ( url );
        if ( obj.result === 1 )
        {
            $("#loginstatus").text(obj.username);
-          window.location.replace("home.php");
+           window.location.replace("home.php");
        }
        else
        {

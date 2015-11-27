@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">-->
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="-1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!--css-->
-<link rel="stylesheet" href="../assets/stylesheets/dashboard.css" type="text/css">
+  <!--css-->
+  <link rel="stylesheet" href="../assets/stylesheets/dashboard.css" type="text/css">
 
-<!-- materialize css -->
-    <!-- <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css"/> -->
-<!--<link type="text/css" rel="stylesheet" href="../assets/materialize/css/materialize.min.css"  media="screen,projection">-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <!-- materialize css -->
+      <!-- <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css"/> -->
+  <!--<link type="text/css" rel="stylesheet" href="../assets/materialize/css/materialize.min.css"  media="screen,projection">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
-<!--font awesome-->
-<link type="text/css" rel="stylesheet" href="../assets/fontawesome/css/font-awesome.min.css"/>
+  <!--font awesome-->
+  <link type="text/css" rel="stylesheet" href="../assets/fontawesome/css/font-awesome.min.css"/>
 
-<title>Sign in to SAFE</title>
-</head>
+  <title>Sign in to SAFE</title>
+  </head>
 
 <body>
 <div id="background">

@@ -3,58 +3,58 @@
 if ( isset ( $_REQUEST [ 'cmd' ] ) )
 {
     $cmd = $_REQUEST[ 'cmd' ];
-    
+
     switch ( $cmd )
     {
         case 1:
             task_preview ( );
             break;
-        
+
         case 2:
             delete_task ( );
             break;
-        
+
         case 3:
             add_task ( );
             break;
-        
+
         case 4:
             update_task ( );
             break;
-        
+
         case 5:
             display_tasks ( );
             break;
-        
+
         case 6:
             search_task ( );
             break;
-        
+
         case 7:
             user_login ( );
             break;
-        
+
         case 8:
             delete_tasks ( );
             break;
-        
+
         case 9:
             select_collaborator ( );
             break;
-        
+
         case 10:
             display_created_task ( );
             break;
-        
+
         case 11:
             search_created_tasks ( );
             break;
-         
+
         default:
             echo '{"result":0,status:"unknown command"}';
             break;
     }//end of switch
-    
+
 }//end of if
 
 
@@ -64,12 +64,12 @@ if ( isset ( $_REQUEST [ 'cmd' ] ) )
 function task_preview ( )
 {
     if ( isset ( $_REQUEST [ 'task_id' ] ) )
-    { 
+    {
         include '../models/user_class.php';
-        
+
         $task_id = $_REQUEST [ 'task_id' ];
-        
-        $obj=new User ( );         
+
+        $obj=new User ( );
         if ( $obj->user_preview_task ( $task_id ) )
         {
             while ( $row = $obj->fetch ( ) )
@@ -104,17 +104,17 @@ function display_tasks ( )
     $obj = new User ( );
     session_start();
     $user_id = $_SESSION['user_id'];
-       
+
     if ( $obj->user_display_assigned_tasks ( $user_id ) )
     {
         $row = $obj->fetch ( );
         echo '{"result":1, "tasks": [';
         while ( $row )
         {
-            echo '{"task_id": "'.$row ["task_id"].'", "task_title": "'.$row ["task_title"].'", 
+            echo '{"task_id": "'.$row ["task_id"].'", "task_title": "'.$row ["task_title"].'",
             "task_description": "'.$row ["task_description"].'",  "user_sname": "'.$row ["user_sname"].'",
             "user_fname": "'.$row ["user_fname"].'"}';
-            
+
             if ($row = $obj->fetch ( ) )   {
                     echo ',';
             }
@@ -156,7 +156,7 @@ function delete_task ( )
  */
 function add_task ( )
 {
-    if ( isset ( $_REQUEST [ 'task_title' ] ) && isset ( $_REQUEST [ 'task_description' ] ) 
+    if ( isset ( $_REQUEST [ 'task_title' ] ) && isset ( $_REQUEST [ 'task_description' ] )
             && isset ( $_REQUEST [ 'user_id' ] ) && isset ( $_REQUEST [ 'task_collaborator' ] )
             && isset ( $_REQUEST [ 'task_start_date' ] ) && isset ( $_REQUEST [ 'task_end_date' ] ) )
     {
@@ -194,16 +194,16 @@ function update_task ( )
             && isset ( $_REQUEST [ 'task_start_date' ] ) && isset ( $_REQUEST [ 'task_end_date' ] ) )
     {
         include '../models/user_class.php';
-        
+
         $task_title = $_REQUEST [ 'update_task_title' ];
         $task_description = $_REQUEST [ 'update_task_description' ];
         $task_id = $_REQUEST [ 'update_task_id' ];
         $task_collaborator = $_REQUEST['task_collaborator'];
         $task_start_date = $_REQUEST ['task_start_date'];
         $task_end_date = $_REQUEST ['task_end_date'];
-        
+
         $obj = new User ( );
-        
+
          if ( $obj->user_update_task ( $task_id, $task_title, $task_description, $task_collaborator,
                   $task_start_date, $task_end_date ) )
         {
@@ -212,7 +212,7 @@ function update_task ( )
         else
         {
              echo ' { "result":0, "status": "Failed to update task" }';
-        }   
+        }
     }
 }//end of update_task ( )
 
@@ -225,13 +225,13 @@ function search_task ( )
     if ( isset ( $_REQUEST [ 'search_text' ] ) )
     {
         include '../models/user_class.php';
-        
+
         $search_text = $_REQUEST [ 'search_text' ];
         session_start();
         $user_id = $_SESSION['user_id'];
-        
+
         $obj = new User ( );
-        
+
         if ( $obj->user_search_task ( $search_text, $user_id ) )
         {
             $row = $obj->fetch ( );
@@ -307,7 +307,7 @@ function delete_tasks ( )
         include_once '../models/user_class.php';
         $task_id = $_REQUEST [ 'task_id' ];
         $obj = new User ( );
-                
+
         foreach ( $task_id as $delete_id )
         {
             if ( $obj->user_delete_task ( $delete_id ) )
@@ -318,7 +318,7 @@ function delete_tasks ( )
             {
                 echo '{"result":0, "status":"Not Deleted"}';
             }
-        }//end of foreach        
+        }//end of foreach
     }
     else
     {
@@ -339,7 +339,7 @@ function  select_collaborator ( )
 //        $user_id = $_SESSION['user_id'];
         include_once '../models/user_class.php';
         $obj = new User ( );
- 
+
         if ( $obj->user_select_collaborator ( $user_id ) )
         {
             $row = $obj->fetch ( );
@@ -371,17 +371,17 @@ function display_created_task ( )
     $obj = new User ( );
     session_start();
     $user_id = $_SESSION['user_id'];
-       
+
     if ( $obj->user_display_created_tasks ( $user_id ) )
     {
         $row = $obj->fetch ( );
         echo '{"result":1, "tasks": [';
         while ( $row )
         {
-            echo '{"task_id": "'.$row ["task_id"].'", "task_title": "'.$row ["task_title"].'", 
+            echo '{"task_id": "'.$row ["task_id"].'", "task_title": "'.$row ["task_title"].'",
             "task_description": "'.$row ["task_description"].'",  "user_sname": "'.$row ["user_sname"].'",
             "user_fname": "'.$row ["user_fname"].'"}';
-            
+
             if ($row = $obj->fetch ( ) )   {
                     echo ',';
             }
@@ -402,13 +402,13 @@ function search_created_tasks ( )
      if ( isset ( $_REQUEST [ 'search_text' ] ) )
     {
         include '../models/user_class.php';
-        
+
         $search_text = $_REQUEST [ 'search_text' ];
         session_start();
         $user_id = $_SESSION['user_id'];
-        
+
         $obj = new User ( );
-        
+
         if ( $obj->user_search_created_task ( $search_text, $user_id ) )
         {
             $row = $obj->fetch ( );
@@ -436,7 +436,7 @@ function sendMail ( )
     $mail = "fredrick.abayie@ashesi.edu.gh";
     $subject = "Mail sending first test";
     $comment = "good or bad";
-    
+
     if ( mail($admin, $subject,  $comment, 'From'.$mail) )
     {
       echo '{"success"}';

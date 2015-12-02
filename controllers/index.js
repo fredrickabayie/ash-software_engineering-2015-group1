@@ -15,7 +15,7 @@ $(document).ready(function(){
     			var task_end_date = response.message[i]['task_end_date'];
     			var details = taskid + " " + nurseid+ " " + task_title + " " + task_description + " " + task_start_date + " " + task_end_date;
     			
-    			htmlString += "<tr><td>"+taskid+"</td><td>"+nurseid+"</td><td>"+task_title+"</td><td>"+task_description+"</td><td>"+task_start_date+"</td><td>"+task_end_date+"</td></tr>"
+    			htmlString += "<tr><td>"+taskid+"</td><td>"+nurseid+"</td><td>"+task_title+"</td><td>"+task_description+"</td><td>"+task_start_date+"</td><td>"+task_end_date+"</td></tr>";
     		}
     	}
     	$("tbody").html(htmlString);

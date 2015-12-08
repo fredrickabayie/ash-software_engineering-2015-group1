@@ -1,4 +1,4 @@
-<?php 
+<?php
 	class adb {
 		var $conn;
 
@@ -60,4 +60,3 @@
      	}
 
 	}
- ?>
